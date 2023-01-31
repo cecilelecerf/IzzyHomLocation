@@ -1,9 +1,20 @@
-<script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+<script>
+import RowCard from '../components/RowCard.vue';
+export default {
+  name:'HomeView',
+  components: {
+    RowCard,
+
+  },
+  // setup(){
+  //   console.log(data);
+  //   console.log(data[0]['title']);
+  // }
+}
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <RowCard/>
   </main>
 </template>
