@@ -17,11 +17,13 @@ a,
 
 .container--flex{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .row {
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 @media (hover: hover) {
