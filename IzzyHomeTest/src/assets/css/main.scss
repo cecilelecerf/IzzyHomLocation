@@ -26,9 +26,29 @@ a,
   justify-content: space-around;
 }
 
+.price{
+  width: max-content;
+  background-color: #3a4cbd;
+  border-radius: 50px;
+  padding: 2px 10px;
+}
+section:hover .price{
+  transition: color 0.5s, background-color 0.5s;
+  background-color: rgba(235, 235, 235, 0.64);
+  color: #3a4cbd; 
+}
+img{
+  width: 100%;
+  height: 100%;
+}
+
+main{
+  margin-top: 50px;
+}
+
 @media (hover: hover) {
   a:hover {
-    background-color: #3a4cbd;
+    color: rgba(235, 235, 235, 0.64);
   }
 }
 

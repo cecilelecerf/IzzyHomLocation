@@ -6,10 +6,6 @@ export default {
     RowCard,
 
   },
-  // setup(){
-  //   console.log(data);
-  //   console.log(data[0]['title']);
-  // }
 }
 </script>
 
