@@ -1,11 +1,24 @@
 <script>
     export default {
         name: 'Search',
+        data(){
+            return{
+                open:false,
+            }
+        },
+        methods:{
+            switchOpen() {
+                console.log(this.open);
+                return this.open = !this.open;
+            }
+        }
     }
 </script>
 
 <template>
-    <form action="" method="get"> 
+    <h2 @click="switchOpen()" v-if="open==false">Filtre</h2>
+    <form action="" method="get" v-if="open==true"> 
+        <h2 @click="switchOpen()">Fermer</h2>
         <section id="is_furnished">
             <h3>Meublé | Non Meublé</h3>
             <div class="container--flex row">
@@ -60,6 +73,9 @@
 
 
 <style lang="scss" scoped>
+h2{
+    text-align: center;
+}
 section{
     width: 30%;
     margin: 20px calc(50% - 15%);
