@@ -16,11 +16,13 @@ export default {
             default:() => ({})
         }
     }
+
   },
 
   mounted(){
 
     bdd.forEach(e => {
+        console.log(this.$route);
         if(e['id']==this.$route.params.id){
             this.item = e;
             this.itemAdress = e['address'];

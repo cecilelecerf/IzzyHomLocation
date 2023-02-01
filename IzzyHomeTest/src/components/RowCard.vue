@@ -11,7 +11,55 @@ export default {
         bdd,
     }
   },
-
+  mounted(){
+    
+    if(this.$route.query.is_furnished=='furnished'){
+        this.bdd.forEach(e => {
+            if(e.is_furnished ==false){
+                this.bdd.splice(this.bdd.indexOf(e), 1)
+            }   
+        });
+    }
+    // console.log(this.$route.query.is_furnised);
+    if(this.$route.query.is_furnised=='not_furnished'){
+        // console.log('ok')
+        this.bdd.forEach(e => {
+            if(e.is_furnished ==true){
+                this.bdd.splice(this.bdd.indexOf(e), 1)
+            }   
+        });
+    }
+    if(this.$route.query.min_living_area){
+        this.bdd.forEach(e => {
+            if(e.living_area < this.$route.query.min_living_area){
+                this.bdd.splice(this.bdd.indexOf(e), 1)
+            }   
+        });
+    }
+    if(this.$route.query.max_living_area){
+        this.bdd.forEach(e => {
+            if(e.living_area > this.$route.query.max_living_area){
+                this.bdd.splice(this.bdd.indexOf(e), 1)
+            }   
+        });
+    }
+    if(this.$route.query.min_full_rent_price){
+        this.bdd.forEach(e => {
+            if(e.full_rent_price < this.$route.query.min_full_rent_price){
+                this.bdd.splice(this.bdd.indexOf(e), 1)
+            }   
+        });
+    }
+    if(this.$route.query.max_full_rent_price){
+        this.bdd.forEach(e => {
+            if(e.full_rent_price > this.$route.query.max_full_rent_price){
+                this.bdd.splice(this.bdd.indexOf(e), 1)
+            }   
+        });
+    }
+    console.log(this.bdd.length);
+    console.log(this.$route.query);
+  }
 }
 </script>
 
